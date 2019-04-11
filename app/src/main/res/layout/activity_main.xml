@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+
+    <TextView
+        android:id="@+id/banner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/unkempt"
+        android:paddingBottom="10dp"
+        android:text="Send  Multiple  Messages"
+        android:textSize="32dp" />
+
+
+
+    <TextView
+        android:id="@+id/msgText"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/banner"
+        android:layout_centerHorizontal="true"
+        android:text="Write Your Message Here."
+        android:gravity="center"
+        android:alpha="0.3"
+        />
+    <EditText
+        android:id="@+id/msgEditText"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/banner"
+        android:layout_centerHorizontal="true"
+        android:inputType="textMultiLine"
+        android:gravity="bottom"
+        android:paddingTop="20dp"
+        />
+
+
+
+    <TextView
+        android:id="@+id/msgCountText"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/msgEditText"
+        android:layout_alignStart="@+id/msgText"
+        android:layout_marginTop="40dp"
+        android:text="Message Count"
+        android:gravity="center"
+        android:alpha="0.3"/>
+
+    <EditText
+        android:id="@+id/msgCount"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:text="1"
+        android:layout_below="@+id/msgEditText"
+        android:layout_alignStart="@+id/msgText"
+        android:layout_marginTop="40dp"
+        android:inputType="number"
+        />
+
+
+
+    <TextView
+        android:id="@+id/delayText"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:layout_alignTop="@+id/msgCountText"
+        android:layout_alignEnd="@+id/msgText"
+        android:text="Delay in Seconds"
+        android:gravity="center"
+        android:alpha="0.3" />
+    <EditText
+        android:id="@+id/delay"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:text="0"
+        android:layout_alignTop="@+id/msgCountText"
+        android:layout_alignEnd="@+id/msgText"
+        android:inputType="number"
+        android:clickable="true"/>
+
+
+
+
+
+    <TextView
+        android:id="@+id/noText"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/msgCount"
+        android:layout_alignStart="@+id/msgEditText"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="40dp"
+        android:text="Enter Phone Number"
+        android:gravity="center"
+        android:alpha="0.3"  />
+
+    <EditText
+        android:id="@+id/noEditText"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/msgCount"
+        android:layout_alignStart="@+id/msgEditText"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="40dp"
+        android:inputType="number" />
+
+
+    <Button
+        android:id="@+id/sendButton"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/noEditText"
+        android:onClick="SendMsg"
+        android:layout_alignEnd="@+id/msgEditText"
+        android:text="Send" />
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+
+
+</RelativeLayout>
+
